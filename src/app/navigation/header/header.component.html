@@ -1,0 +1,283 @@
+<mat-toolbar color="primary">
+    
+    <!-- <mat-drawer-container class="container" autosize> 
+        <mat-drawer #drawer class="sidenav">
+            <button color="primary" mat-button routerLink="./orders">Accountability</button>
+            <button color="primary" mat-button routerLink="./customers">Attendance</button>
+            <button color="primary" mat-button routerLink="./messages">Carrer Transition</button>
+            <button color="primary" mat-button routerLink="./messages">Case Notes</button>
+            <button color="primary" mat-button routerLink="./messages">E-Folder</button>
+            <button color="primary" mat-button routerLink="./messages">Enrollment</button>
+            <button color="primary" mat-button routerLink="./messages">Evaluation</button>
+            <button color="primary" mat-button routerLink="./messages">Finance</button>
+            <button color="primary" mat-button routerLink="./messages">ID Badge</button>
+            <button color="primary" mat-button routerLink="./messages">Management</button>
+            <button color="primary" mat-button routerLink="./messages">PCDP</button>
+            <button color="primary" mat-button routerLink="./messages">Scheduling</button>
+            <button color="primary" mat-button routerLink="./messages">Student Conduct</button>
+            <button color="primary" mat-button routerLink="./messages">Student Information</button>
+            <button color="primary" mat-button routerLink="./messages">System Functions</button>
+            <button color="primary" mat-button routerLink="./messages">Testing</button>
+            <button color="primary" mat-button routerLink="./messages">Training</button>
+            <button color="primary" mat-button routerLink="./messages">Travel</button>
+            <button color="primary" mat-button routerLink="./messages">Wellness and Accomodation</button>
+        </mat-drawer>
+        <div class="sidenav-content">
+            <mat-toolbar color="primary">
+                    <button mat-icon-button (click)="drawer.toggle()"> 
+                        <mat-icon>menu</mat-icon>
+                    </button>
+                    <span>Angular Demo</span>
+                    <span class="spacer"></span>
+                    <mat-icon><a routerLink="./">home </a></mat-icon>
+            </mat-toolbar>
+            
+            <router-outlet></router-outlet>
+        </div>
+    </mat-drawer-container> -->
+    
+    <!-- <div fxHide.gt-xs>
+        <button mat-icon-button (click)="onToggleSidenav()">
+            <mat-icon>menu</mat-icon>
+        </button>
+    </div> -->
+    <div class="menu-home">
+        <a routerLink="./">
+            <mat-icon>home</mat-icon>
+        </a>
+    </div>
+    <!-- <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
+        <ul fxLayout fxLayoutGap="15px" class="navigation-items">
+            <li>
+                <a routerLink="/orders">Order List</a>
+            </li>
+            <li>
+                <a routerLink="/messages">Messages</a>
+            </li>
+        </ul>
+    </div> -->
+
+    <button mat-button [matMenuTriggerFor]="accountability">Accountability</button>
+    <mat-menu #accountability="matMenu">
+        <button mat-menu-item [matMenuTriggerFor]="authorized_absences">Authorized Absences</button>
+        <button mat-menu-item [matMenuTriggerFor]="invertebrates">InvertebratesMorning attendance Check</button>
+        <button mat-menu-item [matMenuTriggerFor]="fish">Student Based Calendar</button>
+        <button mat-menu-item [matMenuTriggerFor]="amphibians">Reports</button>
+    </mat-menu>
+
+    <mat-menu #authorized_absences="matMenu">
+        <a routerLink="./orders">
+        
+        <button mat-menu-item>Browse Pending Leave Requests</button>
+        </a>
+        <button mat-menu-item >Bulk Leave Request</button>
+        <button mat-menu-item >Enter Leave Request</button>
+        <button mat-menu-item>Extend Leave</button>
+        <button mat-menu-item>Manage Leave</button>
+        <button mat-menu-item>Record Departures and Returns</button>
+    </mat-menu>
+
+    <button mat-button [matMenuTriggerFor]="attendance">Attendance</button>
+
+    <mat-menu #attendance="matMenu">
+        <button mat-menu-item [matMenuTriggerFor]="vertebrates">Attendance</button>
+        <button mat-menu-item [matMenuTriggerFor]="amphibians">Bulk Absence Excuse</button>
+        <button mat-menu-item [matMenuTriggerFor]="reptiles">Bulk Class Pass</button>
+        <button mat-menu-item>Daily Attendance</button>
+        <button mat-menu-item>Student Absences</button>
+        <button mat-menu-item>Student Class Absences</button>
+        <button mat-menu-item>Student Class Pass</button>
+        <button mat-menu-item [mat-menu-trigger-for]="birds">Reports</button>
+    </mat-menu>
+
+    <button mat-button [matMenuTriggerFor]="birds">Career Transition</button>
+    <mat-menu #birds="matMenu">
+        <button mat-menu-item [matMenuTriggerFor]="vertebrates">Vertebrates</button>
+        <button mat-menu-item [matMenuTriggerFor]="invertebrates">Invertebrates</button>
+        <button mat-menu-item [matMenuTriggerFor]="fish">Fish</button>
+        <button mat-menu-item [matMenuTriggerFor]="amphibians">Amphibians</button>
+    </mat-menu>
+
+    <button mat-button [matMenuTriggerFor]="birds">Case Notes</button>
+    <mat-menu #birds="matMenu">
+        <button mat-menu-item [matMenuTriggerFor]="vertebrates">Vertebrates</button>
+        <button mat-menu-item [matMenuTriggerFor]="invertebrates">Invertebrates</button>
+        <button mat-menu-item [matMenuTriggerFor]="fish">Fish</button>
+        <button mat-menu-item [matMenuTriggerFor]="amphibians">Amphibians</button>
+    </mat-menu>
+
+    <button mat-button [matMenuTriggerFor]="birds">E-Folder</button>
+    <mat-menu #birds="matMenu">
+        <button mat-menu-item [matMenuTriggerFor]="vertebrates">Vertebrates</button>
+        <button mat-menu-item [matMenuTriggerFor]="invertebrates">Invertebrates</button>
+        <button mat-menu-item [matMenuTriggerFor]="fish">Fish</button>
+        <button mat-menu-item [matMenuTriggerFor]="amphibians">Amphibians</button>
+    </mat-menu>
+
+    <button mat-button [matMenuTriggerFor]="birds">Enrollment</button>
+    <mat-menu #birds="matMenu">
+        <button mat-menu-item [matMenuTriggerFor]="vertebrates">Vertebrates</button>
+        <button mat-menu-item [matMenuTriggerFor]="invertebrates">Invertebrates</button>
+        <button mat-menu-item [matMenuTriggerFor]="fish">Fish</button>
+        <button mat-menu-item [matMenuTriggerFor]="amphibians">Amphibians</button>
+    </mat-menu>
+
+    <button mat-button [matMenuTriggerFor]="animals">Evaluation</button>
+    <mat-menu #animals="matMenu">
+        <button mat-menu-item [matMenuTriggerFor]="vertebrates">Vertebrates</button>
+        <button mat-menu-item [matMenuTriggerFor]="invertebrates">Invertebrates</button>
+        <button mat-menu-item [matMenuTriggerFor]="fish">Fish</button>
+        <button mat-menu-item [matMenuTriggerFor]="amphibians">Amphibians</button>
+    </mat-menu>
+
+    <button mat-button [matMenuTriggerFor]="animals">Finance</button>
+    <mat-menu #animals="matMenu">
+        <button mat-menu-item [matMenuTriggerFor]="vertebrates">Vertebrates</button>
+        <button mat-menu-item [matMenuTriggerFor]="invertebrates">Invertebrates</button>
+        <button mat-menu-item [matMenuTriggerFor]="fish">Fish</button>
+        <button mat-menu-item [matMenuTriggerFor]="amphibians">Amphibians</button>
+    </mat-menu>
+
+    <button mat-button [matMenuTriggerFor]="animals">ID Badge</button>
+    <mat-menu #animals="matMenu">
+        <button mat-menu-item [matMenuTriggerFor]="vertebrates">Vertebrates</button>
+        <button mat-menu-item [matMenuTriggerFor]="invertebrates">Invertebrates</button>
+        <button mat-menu-item [matMenuTriggerFor]="fish">Fish</button>
+        <button mat-menu-item [matMenuTriggerFor]="amphibians">Amphibians</button>
+    </mat-menu>
+
+    <button mat-button [matMenuTriggerFor]="animals">Management</button>
+    <mat-menu #animals="matMenu">
+        <button mat-menu-item [matMenuTriggerFor]="vertebrates">Vertebrates</button>
+        <button mat-menu-item [matMenuTriggerFor]="invertebrates">Invertebrates</button>
+        <button mat-menu-item [matMenuTriggerFor]="fish">Fish</button>
+        <button mat-menu-item [matMenuTriggerFor]="amphibians">Amphibians</button>
+    </mat-menu>
+
+    <button mat-button [matMenuTriggerFor]="animals">PCDP</button>
+    <mat-menu #animals="matMenu">
+        <button mat-menu-item [matMenuTriggerFor]="vertebrates">Vertebrates</button>
+        <button mat-menu-item [matMenuTriggerFor]="invertebrates">Invertebrates</button>
+        <button mat-menu-item [matMenuTriggerFor]="fish">Fish</button>
+        <button mat-menu-item [matMenuTriggerFor]="amphibians">Amphibians</button>
+    </mat-menu>
+
+    <!-- all other menu items -->
+    <!-- <button mat-button [matMenuTriggerFor]="animals">Scheduling</button>
+    <mat-menu #animals="matMenu">
+        <button mat-menu-item [matMenuTriggerFor]="vertebrates">Vertebrates</button>
+        <button mat-menu-item [matMenuTriggerFor]="invertebrates">Invertebrates</button>
+        <button mat-menu-item [matMenuTriggerFor]="fish">Fish</button>
+        <button mat-menu-item [matMenuTriggerFor]="amphibians">Amphibians</button>
+    </mat-menu>
+
+    <button mat-button [matMenuTriggerFor]="animals">Student Conduct</button>
+    <mat-menu #animals="matMenu">
+        <button mat-menu-item [matMenuTriggerFor]="vertebrates">Vertebrates</button>
+        <button mat-menu-item [matMenuTriggerFor]="invertebrates">Invertebrates</button>
+        <button mat-menu-item [matMenuTriggerFor]="fish">Fish</button>
+        <button mat-menu-item [matMenuTriggerFor]="amphibians">Amphibians</button>
+    </mat-menu>
+
+    <button mat-button [matMenuTriggerFor]="animals">Student Information</button>
+    <mat-menu #animals="matMenu">
+        <button mat-menu-item [matMenuTriggerFor]="vertebrates">Vertebrates</button>
+        <button mat-menu-item [matMenuTriggerFor]="invertebrates">Invertebrates</button>
+        <button mat-menu-item [matMenuTriggerFor]="fish">Fish</button>
+        <button mat-menu-item [matMenuTriggerFor]="amphibians">Amphibians</button>
+    </mat-menu>
+
+    <button mat-button [matMenuTriggerFor]="animals">System Functions</button>
+    <mat-menu #animals="matMenu">
+        <button mat-menu-item [matMenuTriggerFor]="vertebrates">Vertebrates</button>
+        <button mat-menu-item [matMenuTriggerFor]="invertebrates">Invertebrates</button>
+        <button mat-menu-item [matMenuTriggerFor]="fish">Fish</button>
+        <button mat-menu-item [matMenuTriggerFor]="amphibians">Amphibians</button>
+    </mat-menu>
+
+    <button mat-button [matMenuTriggerFor]="animals">Testing</button>
+    <mat-menu #animals="matMenu">
+        <button mat-menu-item [matMenuTriggerFor]="vertebrates">Vertebrates</button>
+        <button mat-menu-item [matMenuTriggerFor]="invertebrates">Invertebrates</button>
+        <button mat-menu-item [matMenuTriggerFor]="fish">Fish</button>
+        <button mat-menu-item [matMenuTriggerFor]="amphibians">Amphibians</button>
+    </mat-menu>
+
+    <button mat-button [matMenuTriggerFor]="animals">Training</button>
+    <mat-menu #animals="matMenu">
+        <button mat-menu-item [matMenuTriggerFor]="vertebrates">Vertebrates</button>
+        <button mat-menu-item [matMenuTriggerFor]="invertebrates">Invertebrates</button>
+        <button mat-menu-item [matMenuTriggerFor]="fish">Fish</button>
+        <button mat-menu-item [matMenuTriggerFor]="amphibians">Amphibians</button>
+    </mat-menu>
+
+    <button mat-button [matMenuTriggerFor]="animals">Travel</button>
+    <mat-menu #animals="matMenu">
+        <button mat-menu-item [matMenuTriggerFor]="vertebrates">Vertebrates</button>
+        <button mat-menu-item [matMenuTriggerFor]="invertebrates">Invertebrates</button>
+        <button mat-menu-item [matMenuTriggerFor]="fish">Fish</button>
+        <button mat-menu-item [matMenuTriggerFor]="amphibians">Amphibians</button>
+    </mat-menu>
+
+    <button mat-button [matMenuTriggerFor]="animals">Wellness and Accomodation</button>
+    <mat-menu #animals="matMenu">
+        <button mat-menu-item [matMenuTriggerFor]="vertebrates">Vertebrates</button>
+        <button mat-menu-item [matMenuTriggerFor]="invertebrates">Invertebrates</button>
+        <button mat-menu-item [matMenuTriggerFor]="fish">Fish</button>
+        <button mat-menu-item [matMenuTriggerFor]="amphibians">Amphibians</button>
+    </mat-menu> -->
+
+    <button mat-button>Change Center</button>
+    <!-- Sub menus -->
+    <mat-menu #vertebrates="matMenu">
+        <button mat-menu-item [matMenuTriggerFor]="fish">Fishes</button>
+        <button mat-menu-item [matMenuTriggerFor]="amphibians">Amphibians</button>
+        <button mat-menu-item [matMenuTriggerFor]="reptiles">Reptiles</button>
+        <button mat-menu-item>Birds</button>
+        <button mat-menu-item>Mammals</button>
+    </mat-menu>
+
+    <mat-menu #invertebrates="matMenu">
+        <button mat-menu-item>Insects</button>
+        <button mat-menu-item>Molluscs</button>
+        <button mat-menu-item>Crustaceans</button>
+        <button mat-menu-item>Corals</button>
+        <button mat-menu-item>Arachnids</button>
+        <button mat-menu-item>Velvet worms</button>
+        <button mat-menu-item>Horseshoe crabs</button>
+    </mat-menu>
+
+    <mat-menu #fish="matMenu">
+        <button mat-menu-item>Baikal oilfish</button>
+        <button mat-menu-item>Bala shark</button>
+        <button mat-menu-item>Ballan wrasse</button>
+        <button mat-menu-item>Bamboo shark</button>
+        <button mat-menu-item>Banded killifish</button>
+    </mat-menu>
+
+    <mat-menu #amphibians="matMenu">
+        <button mat-menu-item>Sonoran desert toad</button>
+        <button mat-menu-item>Western toad</button>
+        <button mat-menu-item>Arroyo toad</button>
+        <button mat-menu-item>Yosemite toad</button>
+    </mat-menu>
+
+    <mat-menu #reptiles="matMenu">
+        <button mat-menu-item>Banded Day Gecko</button>
+        <button mat-menu-item>Banded Gila Monster</button>
+        <button mat-menu-item>Black Tree Monitor</button>
+        <button mat-menu-item>Blue Spiny Lizard</button>
+        <button mat-menu-item disabled>Velociraptor</button>
+    </mat-menu>
+
+    <button mat-icon-button [matMenuTriggerFor]="cascademenu">
+        <mat-icon class="cascademenu">more_vert</mat-icon>
+    </button>
+    <mat-menu #cascademenu="matMenu">
+        <button mat-menu-item>
+            <mat-icon>publish</mat-icon>
+            <span>Share</span>
+        </button>
+    </mat-menu>
+
+</mat-toolbar>
