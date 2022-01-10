@@ -3,9 +3,14 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { CommonModule } from '@angular/common';
 import {CustomerListComponent} from './customers/customer-list/customer-list.component';
+import { EnrollmentComponent } from './enrollment/enrollment.component';
 
 
 const routes: Routes = [
+
+  {
+    path: 'enrollment', component:EnrollmentComponent
+  },
   {
     path:'customers',
     component: CustomerListComponent

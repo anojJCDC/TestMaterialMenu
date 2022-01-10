@@ -2,11 +2,12 @@
 /* @import './my-theme.scss'; */
 
 html, body {
-    height: 100%;
+    height: auto;
+    width: auto;
     margin: 0%;
 }
 
 body {
     margin: 0%;
-    font-family: Roboto, Arial, sans-serif;
+    font-family: Source Sans Pro, Roboto, Arial, sans-serif;
 }
